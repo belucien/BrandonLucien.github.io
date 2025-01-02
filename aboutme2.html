@@ -9,8 +9,8 @@
 		<style>
 			/* General Layout */
 			body {
-				font-family: 'Arial', sans-serif;
-				background-color: #e6eff5;
+				font-family: Arial, sans-serif;
+				background-color: #f0f4f8;
 				color: #333;
 				margin: 0;
 				padding: 0;
@@ -18,17 +18,18 @@
 
 			#main {
 				display: flex;
-				align-items: center;
 				justify-content: space-between;
-				max-width: 1200px;
+				align-items: center;
 				margin: 40px auto;
-				background-color: #ffffff;
 				padding: 40px;
-				border-radius: 10px;
+				width: 90%;
+				max-width: 1200px;
+				background-color: #ffffff;
+				border-radius: 8px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 
-			/* Left Column Styling */
+			/* Text Section */
 			.text-section {
 				width: 60%;
 				padding-right: 20px;
@@ -63,7 +64,7 @@
 				text-decoration: underline;
 			}
 
-			/* Right Column Styling */
+			/* Image Section */
 			.image-section {
 				width: 35%;
 				text-align: center;
@@ -73,6 +74,63 @@
 				width: 100%;
 				border-radius: 10px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			/* Carousel Styling */
+			.carousel {
+				position: relative;
+				width: 100%;
+				margin-top: 20px;
+				overflow: hidden;
+				height: 250px;
+			}
+
+			.carousel img {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				animation: fadeInOut 9s infinite;
+			}
+
+			.carousel img:nth-child(1) {
+				animation-delay: 0s;
+			}
+
+			.carousel img:nth-child(2) {
+				animation-delay: 3s;
+			}
+
+			.carousel img:nth-child(3) {
+				animation-delay: 6s;
+			}
+
+			@keyframes fadeInOut {
+				0%, 100% { opacity: 0; }
+				33%, 66% { opacity: 1; }
+			}
+
+			/* Footer Styling */
+			footer {
+				margin: 40px auto;
+				width: 80%;
+				text-align: center;
+				background: #f9f9f9;
+				padding: 20px;
+				border-radius: 12px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			footer .contact {
+				margin: 10px 0;
+			}
+
+			footer iframe {
+				margin-top: 20px;
+				width: 300px;
+				height: 80px;
+				border-radius: 8px;
 			}
 		</style>
 	</head>
@@ -107,9 +165,33 @@
 
 				<!-- Image Section -->
 				<div class="image-section">
-					<img src="images/Picture1.jpg" alt="Brandon Lucien Profile Photo">
+					<img src="images/Picture1.jpg" alt="Brandon Lucien">
+					<div class="carousel">
+						<img src="images/1.jpg" alt="Hobby 1">
+						<img src="images/2.jpg" alt="Hobby 2">
+						<img src="images/6.jpg" alt="Hobby 3">
+					</div>
 				</div>
 			</div>
+
+			<!-- Footer -->
+			<footer>
+				<div class="contact">
+					<p>Los Angeles, CA</p>
+					<p>(562) 980-2064</p>
+					<p>brandon.lucien@outlook.com</p>
+					<div>
+						<a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
+						<a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+					</div>
+				</div>
+				<!-- Spotify Player -->
+				<iframe 
+					src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
+					frameborder="0" 
+					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+				</iframe>
+			</footer>
 		</div>
 
 	</body>
