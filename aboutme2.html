@@ -54,13 +54,18 @@
 				0%, 100% { opacity: 0; }
 				33%, 66% { opacity: 1; }
 			}
-			/* Spotify Playlist */
+			/* Centered Spotify Playlist */
 			#spotify {
-				position: fixed;
-				top: 10px;
-				right: 10px;
-				width: 300px;
-				height: 80px;
+				text-align: center;
+				margin: 20px 0;
+			}
+			/* Center Footer Content */
+			footer .contact {
+				text-align: center;
+			}
+			footer .contact section {
+				display: inline-block;
+				margin: 10px;
 			}
 		</style>
 	</head>
@@ -68,18 +73,6 @@
 
 		<!-- Wrapper -->
 		<div id="wrapper">
-
-			<!-- Spotify Playlist -->
-			<div id="spotify">
-				<iframe 
-					src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" 
-					width="300" 
-					height="80" 
-					frameborder="0" 
-					allowtransparency="true" 
-					allow="encrypted-media">
-				</iframe>
-			</div>
 
 			<!-- Header -->
 			<header id="header">
@@ -91,7 +84,6 @@
 				<ul class="links">
 					<li><a href="index.html">Projects</a></li>
 					<li class="active"><a href="aboutme.html">About Me</a></li>
-                    <li class="active"><a href="aboutme2.html">About Me</a></li>
 				</ul>
 			</nav>
 
@@ -120,6 +112,17 @@
 						</p>
 					</div>
 				</section>
+
+				<!-- Spotify Playlist -->
+				<div id="spotify">
+					<iframe 
+						src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T?si=e2fbb63e262144ef&autoplay=true" 
+						width="300" 
+						height="380" 
+						frameborder="0" 
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+					</iframe>
+				</div>
 			</div>
 
 			<!-- Footer -->
