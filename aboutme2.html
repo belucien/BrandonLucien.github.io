@@ -15,12 +15,60 @@
 				max-width: 1200px;
 			}
 
-			/* Spotify Player Styling */
-			#spotify {
-				text-align: center;
-				margin: 20px auto;
-				width: 300px;
-				height: 80px; /* Adjusted height */
+			/* Left Section Styling */
+			.left-section {
+				width: 40%;
+				float: left;
+			}
+
+			/* Right Section Styling */
+			.right-section {
+				width: 55%;
+				float: right;
+			}
+
+			/* Image Styling */
+			.image-block img {
+				width: 60%; /* Reduced size */
+				display: block;
+				margin: 10px auto;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			/* Carousel Styling */
+			.carousel {
+				position: relative;
+				width: 60%;
+				margin: 10px auto;
+				overflow: hidden;
+				height: 200px;
+			}
+
+			.carousel img {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				animation: fadeInOut 9s infinite;
+			}
+
+			.carousel img:nth-child(1) {
+				animation-delay: 0s;
+			}
+
+			.carousel img:nth-child(2) {
+				animation-delay: 3s;
+			}
+
+			.carousel img:nth-child(3) {
+				animation-delay: 6s;
+			}
+
+			@keyframes fadeInOut {
+				0%, 100% { opacity: 0; }
+				33%, 66% { opacity: 1; }
 			}
 
 			/* Footer Styling */
@@ -28,10 +76,10 @@
 				margin: 0 auto;
 				width: 60%; /* Footer is smaller than the Main section */
 				text-align: center;
-				background: #f9f9f9; /* Light background */
-				padding: 15px 10px;
-				border-radius: 12px; /* Rounded corners */
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+				background: #f9f9f9;
+				padding: 20px;
+				border-radius: 12px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 
 			footer .contact section {
@@ -49,7 +97,6 @@
 				font-size: 14px;
 				color: #555;
 				margin: 0;
-				text-align: center;
 			}
 
 			footer .contact ul.icons.alt {
@@ -65,6 +112,11 @@
 
 			footer .contact ul.icons.alt li a:hover {
 				color: #333;
+			}
+
+			/* Spotify Player */
+			#spotify {
+				margin-top: 20px;
 			}
 		</style>
 	</head>
@@ -94,7 +146,7 @@
 							<img src="images/Picture1.jpg" alt="About Me">
 							<p>Hello! I’m Brandon, a data analyst passionate about uncovering insights from data.</p>
 						</div>
-						<div class="image-block carousel">
+						<div class="carousel">
 							<img src="images/1.jpg" alt="Hobby 1">
 							<img src="images/2.jpg" alt="Hobby 2">
 							<img src="images/6.jpg" alt="Hobby 3">
@@ -111,18 +163,6 @@
 						</p>
 					</div>
 				</section>
-
-				<!-- Spotify Player -->
-				<div id="spotify">
-					<iframe 
-						src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
-						width="300" 
-						height="80" 
-						frameborder="0" 
-						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-					</iframe>
-					<p><small>Note: Log in to Spotify for full song playback.</small></p>
-				</div>
 			</div>
 
 			<!-- Footer -->
@@ -148,6 +188,15 @@
 						</ul>
 					</section>
 				</section>
+				<div id="spotify">
+					<iframe 
+						src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
+						width="300" 
+						height="80" 
+						frameborder="0" 
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+					</iframe>
+				</div>
 			</footer>
 
 			<!-- Copyright -->
