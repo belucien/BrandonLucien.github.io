@@ -7,65 +7,63 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Styling for the About Me Section */
-			.about-container {
-				display: flex;
-				flex-direction: row;
-				align-items: flex-start;
-				justify-content: space-between;
-			}
-			.left-section {
-				flex: 1;
+			/* Styling for the Main Section */
+			#main {
+				margin: 20px auto;
 				padding: 20px;
+				width: 80%;
+				max-width: 1200px;
 			}
-			.right-section {
-				flex: 2;
-				padding: 20px;
-			}
-			.image-block {
-				margin-bottom: 20px;
-			}
-			.image-block img {
-				width: 100%;
-				border-radius: 8px;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			}
-			.carousel {
-				position: relative;
-				overflow: hidden;
-				height: 200px;
-			}
-			.carousel img {
-				width: 100%;
-				position: absolute;
-				opacity: 0;
-				animation: fadeInOut 10s infinite;
-			}
-			.carousel img:nth-child(1) {
-				animation-delay: 0s;
-			}
-			.carousel img:nth-child(2) {
-				animation-delay: 3.3s;
-			}
-			.carousel img:nth-child(3) {
-				animation-delay: 6.6s;
-			}
-			@keyframes fadeInOut {
-				0%, 100% { opacity: 0; }
-				33%, 66% { opacity: 1; }
-			}
-			/* Centered Spotify Playlist */
+
+			/* Spotify Player Styling */
 			#spotify {
 				text-align: center;
-				margin: 20px 0;
+				margin: 20px auto;
+				width: 300px;
+				height: 80px; /* Adjusted height */
 			}
-			/* Center Footer Content */
-			footer .contact {
+
+			/* Footer Styling */
+			footer {
+				margin: 0 auto;
+				width: 60%; /* Footer is smaller than the Main section */
 				text-align: center;
+				background: #f9f9f9; /* Light background */
+				padding: 15px 10px;
+				border-radius: 12px; /* Rounded corners */
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
 			}
+
 			footer .contact section {
-				display: inline-block;
-				margin: 10px;
+				margin: 10px 0;
+			}
+
+			footer .contact section h3 {
+				font-size: 16px;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 5px;
+			}
+
+			footer .contact section p {
+				font-size: 14px;
+				color: #555;
+				margin: 0;
+			}
+
+			footer .contact ul.icons.alt {
+				display: inline-flex;
+				gap: 10px;
+			}
+
+			footer .contact ul.icons.alt li a {
+				font-size: 20px;
+				color: #666;
+				transition: color 0.3s;
+			}
+
+			footer .contact ul.icons.alt li a:hover {
+				color: #333;
 			}
 		</style>
 	</head>
@@ -113,12 +111,12 @@
 					</div>
 				</section>
 
-				<!-- Spotify Playlist -->
+				<!-- Spotify Player -->
 				<div id="spotify">
 					<iframe 
-						src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T?si=e2fbb63e262144ef&autoplay=true" 
+						src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T?autoplay=1" 
 						width="300" 
-						height="380" 
+						height="80" 
 						frameborder="0" 
 						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
 					</iframe>
@@ -126,32 +124,31 @@
 			</div>
 
 			<!-- Footer -->
-<footer id="footer">
-	<section class="contact">
-		<section class="alt">
-			<h3>Address</h3>
-			<p>Los Angeles, CA</p>
-		</section>
-		<section>
-			<h3>Phone</h3>
-			<p><a href="#">(123) 456-7890</a></p>
-		</section>
-		<section>
-			<h3>Email</h3>
-			<p><a href="#">brandon.lucien@outlook.com</a></p>
-		</section>
-		<section>
-			<h3>Social</h3>
-			<ul class="icons alt">
-				<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-			</ul>
-		</section>
-	</section>
-</footer>
-
+			<footer id="footer">
+				<section class="contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Los Angeles, CA</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="#">(123) 456-7890</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="#">brandon.lucien@outlook.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
 
 			<!-- Copyright -->
 			<div id="copyright">
