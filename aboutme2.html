@@ -22,78 +22,44 @@
 				background-color: #ffffff;
 				border-radius: 8px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
 			}
 
-			/* Text Section */
-			.text-section {
-				width: 60%;
-				padding-right: 20px;
-			}
-
-			.text-section h1 {
-				font-size: 24px;
-				font-weight: bold;
-				color: #2c3e50;
-				margin-bottom: 20px;
-				border-bottom: 2px solid #3498db;
-				display: inline-block;
-			}
-
-			.text-section p {
-				font-size: 16px;
-				line-height: 1.8;
-				color: #555;
-			}
-
-			/* Image Section */
-			.image-section {
-				width: 35%;
-				text-align: center;
-			}
-
-			.image-section img {
-				width: 100%;
+			/* Navigation Styling */
+			#nav {
+				background-color: #2c3e50;
+				padding: 10px 0;
 				border-radius: 8px;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				margin-bottom: 20px;
 			}
 
-			/* Carousel Styling */
-			.carousel {
-				position: relative;
-				width: 100%;
-				margin-top: 20px;
-				overflow: hidden;
-				height: 250px;
+			#nav ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				justify-content: center;
 			}
 
-			.carousel img {
-				width: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				opacity: 0;
-				animation: fadeInOut 9s infinite;
+			#nav ul li {
+				margin: 0 15px;
 			}
 
-			.carousel img:nth-child(1) {
-				animation-delay: 0s;
+			#nav ul li a {
+				color: #ffffff;
+				text-decoration: none;
+				font-size: 16px;
+				font-weight: bold;
+				padding: 8px 12px;
+				border-radius: 4px;
+				transition: background-color 0.3s;
 			}
 
-			.carousel img:nth-child(2) {
-				animation-delay: 3s;
+			#nav ul li a:hover {
+				background-color: #3498db;
 			}
 
-			.carousel img:nth-child(3) {
-				animation-delay: 6s;
-			}
-
-			@keyframes fadeInOut {
-				0%, 100% { opacity: 0; }
-				33%, 66% { opacity: 1; }
+			#nav ul li.active a {
+				background-color: #3498db;
 			}
 
 			/* Footer Styling */
@@ -105,10 +71,6 @@
 				padding: 20px;
 				border-radius: 12px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			}
-
-			footer .contact {
-				margin: 10px 0;
 			}
 
 			footer iframe {
@@ -128,6 +90,15 @@
 			<header id="header">
 				<a href="index.html" class="logo">Brandon Lucien</a>
 			</header>
+
+			<!-- Navigation -->
+			<nav id="nav">
+				<ul class="links">
+					<li class="active"><a href="index.html">Projects</a></li>
+					<li><a href="aboutme.html">About Me</a></li>
+					<li><a href="aboutme2.html">About Me Update</a></li>
+				</ul>
+			</nav>
 
 			<!-- Main Content -->
 			<div id="main">
