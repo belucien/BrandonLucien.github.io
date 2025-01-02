@@ -7,31 +7,56 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Styling for the Main Section */
+			/* General Layout */
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f4f8;
+				color: #333;
+			}
+
 			#main {
 				margin: 20px auto;
-				padding: 20px;
-				width: 80%;
+				padding: 40px;
+				width: 90%;
 				max-width: 1200px;
+				background-color: #ffffff;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
 			}
 
-			/* Left Section Styling */
-			.left-section {
-				width: 40%;
-				float: left;
+			/* Text Section */
+			.text-section {
+				width: 60%;
+				padding-right: 20px;
 			}
 
-			/* Right Section Styling */
-			.right-section {
-				width: 55%;
-				float: right;
+			.text-section h1 {
+				font-size: 24px;
+				font-weight: bold;
+				color: #2c3e50;
+				margin-bottom: 20px;
+				border-bottom: 2px solid #3498db;
+				display: inline-block;
 			}
 
-			/* Image Styling */
-			.image-block img {
-				width: 60%; /* Reduced size */
-				display: block;
-				margin: 10px auto;
+			.text-section p {
+				font-size: 16px;
+				line-height: 1.8;
+				color: #555;
+			}
+
+			/* Image Section */
+			.image-section {
+				width: 35%;
+				text-align: center;
+			}
+
+			.image-section img {
+				width: 100%;
 				border-radius: 8px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
@@ -39,10 +64,10 @@
 			/* Carousel Styling */
 			.carousel {
 				position: relative;
-				width: 60%;
-				margin: 10px auto;
+				width: 100%;
+				margin-top: 20px;
 				overflow: hidden;
-				height: 200px;
+				height: 250px;
 			}
 
 			.carousel img {
@@ -73,8 +98,8 @@
 
 			/* Footer Styling */
 			footer {
-				margin: 0 auto;
-				width: 60%; /* Footer is smaller than the Main section */
+				margin: 40px auto;
+				width: 80%;
 				text-align: center;
 				background: #f9f9f9;
 				padding: 20px;
@@ -82,45 +107,19 @@
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 
-			footer .contact section {
+			footer .contact {
 				margin: 10px 0;
 			}
 
-			footer .contact section h3 {
-				font-size: 16px;
-				font-weight: bold;
-				color: #333;
-				margin-bottom: 5px;
-			}
-
-			footer .contact section p {
-				font-size: 14px;
-				color: #555;
-				margin: 0;
-			}
-
-			footer .contact ul.icons.alt {
-				display: inline-flex;
-				gap: 10px;
-			}
-
-			footer .contact ul.icons.alt li a {
-				font-size: 20px;
-				color: #666;
-				transition: color 0.3s;
-			}
-
-			footer .contact ul.icons.alt li a:hover {
-				color: #333;
-			}
-
-			/* Spotify Player */
-			#spotify {
+			footer iframe {
 				margin-top: 20px;
+				width: 300px;
+				height: 80px;
+				border-radius: 8px;
 			}
 		</style>
 	</head>
-	<body class="is-preload">
+	<body>
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -130,80 +129,53 @@
 				<a href="index.html" class="logo">Brandon Lucien</a>
 			</header>
 
-			<!-- Nav -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html">Projects</a></li>
-					<li class="active"><a href="aboutme.html">About Me</a></li>
-				</ul>
-			</nav>
-
-			<!-- Main -->
+			<!-- Main Content -->
 			<div id="main">
-				<section class="about-container">
-					<div class="left-section">
-						<div class="image-block">
-							<img src="images/Picture1.jpg" alt="About Me">
-							<p>Hello! I’m Brandon, a data analyst passionate about uncovering insights from data.</p>
-						</div>
-						<div class="carousel">
-							<img src="images/1.jpg" alt="Hobby 1">
-							<img src="images/2.jpg" alt="Hobby 2">
-							<img src="images/6.jpg" alt="Hobby 3">
-						</div>
-						<p>When I’m not working with data, I enjoy hiking, photography, and playing guitar!</p>
+				<!-- Text Section -->
+				<div class="text-section">
+					<h1>About Me</h1>
+					<p>
+						Hi, my name is Brandon, and I am a passionate data analyst with experience in uncovering insights 
+						from complex datasets. With tools like SQL, Power BI, and Python, I transform data into meaningful stories.
+					</p>
+					<p>
+						In my free time, I enjoy hiking, photography, and exploring creative projects that fuel my curiosity. 
+						I’m always looking for ways to solve puzzles and provide value to the projects I take on.
+					</p>
+					<p>
+						Feel free to connect with me to discuss projects, collaborations, or just to say hi!
+					</p>
+				</div>
+
+				<!-- Image Section -->
+				<div class="image-section">
+					<img src="images/Picture1.jpg" alt="Brandon Lucien">
+					<div class="carousel">
+						<img src="images/1.jpg" alt="Hobby 1">
+						<img src="images/2.jpg" alt="Hobby 2">
+						<img src="images/6.jpg" alt="Hobby 3">
 					</div>
-					<div class="right-section">
-						<h2>Welcome to My Space!</h2>
-						<p>
-							Here, you’ll get to know a little more about me—my journey into data analytics, my hobbies, and what inspires me daily. I strive to connect meaningful insights with actionable results.
-						</p>
-						<p>
-							My journey in data began with a simple curiosity: “What story can numbers tell us?” Today, that curiosity drives my professional projects and personal hobbies alike.
-						</p>
-					</div>
-				</section>
+				</div>
 			</div>
 
 			<!-- Footer -->
-			<footer id="footer">
-				<section class="contact">
-					<section class="alt">
-						<h3>Address</h3>
-						<p>Los Angeles, CA</p>
-					</section>
-					<section>
-						<h3>Phone</h3>
-						<p><a href="#">(562) 980-2064</a></p>
-					</section>
-					<section>
-						<h3>Email</h3>
-						<p><a href="#">brandon.lucien@outlook.com</a></p>
-					</section>
-					<section>
-						<h3>Social</h3>
-						<ul class="icons alt">
-							<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</section>
-				</section>
-				<div id="spotify">
-					<iframe 
-						src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
-						width="300" 
-						height="80" 
-						frameborder="0" 
-						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-					</iframe>
+			<footer>
+				<div class="contact">
+					<p>Los Angeles, CA</p>
+					<p>(562) 980-2064</p>
+					<p>brandon.lucien@outlook.com</p>
+					<div>
+						<a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
+						<a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+					</div>
 				</div>
+				<!-- Spotify Player -->
+				<iframe 
+					src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
+					frameborder="0" 
+					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+				</iframe>
 			</footer>
-
-			<!-- Copyright -->
-			<div id="copyright">
-				<ul><li>&copy; 2025 Brandon Lucien</li></ul>
-			</div>
-
 		</div>
 
 		<!-- Scripts -->
