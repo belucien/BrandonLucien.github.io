@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>About Me</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Styling for the About Me Section */
+			.about-container {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: space-between;
+			}
+			.left-section {
+				flex: 1;
+				padding: 20px;
+			}
+			.right-section {
+				flex: 2;
+				padding: 20px;
+			}
+			.image-block {
+				margin-bottom: 20px;
+			}
+			.image-block img {
+				width: 100%;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+			.carousel {
+				position: relative;
+				overflow: hidden;
+				height: 200px;
+			}
+			.carousel img {
+				width: 100%;
+				position: absolute;
+				opacity: 0;
+				animation: fadeInOut 10s infinite;
+			}
+			.carousel img:nth-child(1) {
+				animation-delay: 0s;
+			}
+			.carousel img:nth-child(2) {
+				animation-delay: 3.3s;
+			}
+			.carousel img:nth-child(3) {
+				animation-delay: 6.6s;
+			}
+			@keyframes fadeInOut {
+				0%, 100% { opacity: 0; }
+				33%, 66% { opacity: 1; }
+			}
+			/* Spotify Playlist */
+			#spotify {
+				position: fixed;
+				top: 10px;
+				right: 10px;
+				width: 300px;
+				height: 80px;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Spotify Playlist -->
+			<div id="spotify">
+				<iframe 
+					src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" 
+					width="300" 
+					height="80" 
+					frameborder="0" 
+					allowtransparency="true" 
+					allow="encrypted-media">
+				</iframe>
+			</div>
+
+			<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="logo">Brandon Lucien</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Projects</a></li>
+					<li class="active"><a href="aboutme.html">About Me</a></li>
+                    <li class="active"><a href="aboutme2.html">About Me</a></li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+				<section class="about-container">
+					<div class="left-section">
+						<div class="image-block">
+							<img src="images/about1.jpg" alt="About Me">
+							<p>Hello! I’m Brandon, a data analyst passionate about uncovering insights from data.</p>
+						</div>
+						<div class="image-block carousel">
+							<img src="images/hobby1.jpg" alt="Hobby 1">
+							<img src="images/hobby2.jpg" alt="Hobby 2">
+							<img src="images/hobby3.jpg" alt="Hobby 3">
+						</div>
+						<p>When I’m not working with data, I enjoy hiking, photography, and playing guitar!</p>
+					</div>
+					<div class="right-section">
+						<h2>Welcome to My Space!</h2>
+						<p>
+							Here, you’ll get to know a little more about me—my journey into data analytics, my hobbies, and what inspires me daily. I strive to connect meaningful insights with actionable results.
+						</p>
+						<p>
+							My journey in data began with a simple curiosity: “What story can numbers tell us?” Today, that curiosity drives my professional projects and personal hobbies alike.
+						</p>
+					</div>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<section class="split contact">
+					<section class="alt">
+						<h3>Address</h3>
+						<p>Los Angeles, CA</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="#">(123) 456-7890</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="#">brandon.lucien@outlook.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
+			</footer>
+
+			<!-- Copyright -->
+			<div id="copyright">
+				<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
