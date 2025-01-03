@@ -189,25 +189,66 @@
 
 			/* Footer Styling */
 			footer {
-				margin: 40px auto;
-				width: 80%;
-				text-align: center;
-				background: #f9f9f9;
-				padding: 20px;
-				border-radius: 12px;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			}
+	text-align      : center;       /* Center-aligns all footer content */
+	padding         : 40px 20px;    /* Adds padding around the footer */
+	background-color: #444;         /* Background color of the footer */
+	color           : #fff;         /* Text color */
+	border-radius   : 0 0 8px 8px;  /* Rounds the bottom corners */
+}
 
-			footer .contact {
-				margin: 10px 0;
-			}
+footer .split {
+	display        : flex;    /* Creates a horizontal layout */
+	flex-wrap      : wrap;    /* Ensures sections wrap on smaller screens */
+	justify-content: center;  /* Centers content horizontally */
+	gap            : 20px;    /* Space between sections */
+}
 
-			footer iframe {
-				margin-top: 20px;
-				width: 300px;
-				height: 80px;
-				border-radius: 8px;
-			}
+footer .split section {
+	flex  : 1 1 200px;  /* Makes each section responsive */
+	margin: 10px;       /* Adds space around each section */
+}
+
+footer .split h3 {
+	font-size    : 18px;
+	font-weight  : bold;
+	margin-bottom: 10px;     /* Adds space below headers */
+	color        : #ffcc00;  /* Highlight header color */
+}
+
+footer .split p {
+	font-size: 14px;
+	margin   : 0;
+	color    : #ddd;  /* Subtle text color */
+}
+
+footer .split a {
+	color          : #ffcc00;          /* Link color */
+	text-decoration: none;             /* Removes underline */
+	transition     : color 0.3s ease;
+}
+
+footer .split a:hover {
+	color: #fff;  /* Changes link color on hover */
+}
+
+footer .icons {
+	display        : flex;      /* Horizontal alignment for icons */
+	justify-content: center;
+	gap            : 10px;      /* Space between icons */
+	list-style     : none;
+	margin         : 10px 0 0;
+	padding        : 0;
+}
+
+footer .icons a {
+	color     : #ffcc00;          /* Icon color */
+	font-size : 24px;             /* Icon size */
+	transition: color 0.3s ease;
+}
+
+footer .icons a:hover {
+	color: #fff;  /* Changes icon color on hover */
+}
 		</style>
 	</head>
 	<body>
@@ -263,17 +304,27 @@
 
 			<!-- Footer -->
 			<footer>
-				<div class="contact">
-					<p>Los Angeles, CA</p>
-					<p>(123) 456-7890</p>
-					<p>abc@outlook.com</p>
-				</div>
-				<!-- Spotify Player -->
-				<iframe 
-					src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
-					frameborder="0" 
-					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-				</iframe>
+				<section class="split contact">
+					<section class="alt">
+						<h3>Location</h3>
+						<p>Los Angeles, CA</p>
+					</section>
+					<section>
+						<h3>Phone</h3>
+						<p><a href="tel:1234567890">(123) 456-7890</a></p>
+					</section>
+					<section>
+						<h3>Email</h3>
+						<p><a href="mailto:abc@outlook.com">abc@outlook.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://www.linkedin.com/in/brandon-lucien-4652b864/" class="icon brands alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/belucien" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+						</ul>
+					</section>
+				</section>
 			</footer>
 		</div>
 
