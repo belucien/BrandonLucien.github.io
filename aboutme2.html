@@ -1,210 +1,195 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>About Me</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* General Layout */
-			body {
-				font-family: Arial, sans-serif;
-				background-color: #f7f9fc;
-				color: #333;
-				margin: 0;
-				padding: 0;
-			}
+<head>
+    <title>About Me - Brandon Lucien</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* General Layout */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-			/* Navigation Bar */
-			#nav {
-				background-color: #34495e;
-				padding: 10px 20px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				color: #ffffff;
-			}
+        /* Header Styling */
+        #header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-			#nav .links {
-				list-style: none;
-				display: flex;
-				margin: 0;
-				padding: 0;
-			}
+        #header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
 
-			#nav .links li {
-				margin-right: 20px;
-			}
+        /* Navigation Styling */
+        #nav {
+            background: #34495e;
+            overflow: hidden;
+        }
 
-			#nav .links a {
-				color: #ffffff;
-				text-decoration: none;
-				font-size: 16px;
-			}
+        #nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-			#nav .links a:hover {
-				text-decoration: underline;
-			}
+        #nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
 
-			/* Main Section */
-			#main {
-				margin: 20px auto;
-				padding: 40px;
-				width: 90%;
-				max-width: 1200px;
-				background-color: #ffffff;
-				border-radius: 8px;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: flex-start;
-			}
+        #nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            display: inline-block;
+        }
 
-			/* Text Section */
-			.text-section {
-				width: 55%;
-				padding-right: 20px;
-			}
+        #nav ul li a:hover {
+            background: #1abc9c;
+            border-radius: 5px;
+        }
 
-			.text-section h1 {
-				font-size: 28px;
-				font-weight: bold;
-				color: #2c3e50;
-				margin-bottom: 20px;
-				border-bottom: 2px solid #3498db;
-				display: inline-block;
-			}
+        /* Main Content */
+        #main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-			.text-section p {
-				font-size: 16px;
-				line-height: 1.8;
-				color: #555;
-				margin-bottom: 20px;
-			}
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            flex-wrap: wrap;
+        }
 
-			/* Image Section */
-			.image-section {
-				width: 40%;
-				text-align: center;
-			}
+        /* Text Section */
+        .text-section {
+            flex: 1;
+            min-width: 280px;
+            margin-right: 20px;
+        }
 
-			.image-section img {
-				width: 100%;
-				border-radius: 8px;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			}
+        .text-section h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
 
-			.carousel {
-				position: relative;
-				width: 100%;
-				margin-top: 20px;
-				overflow: hidden;
-				height: 250px;
-			}
+        .text-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
 
-			.carousel img {
-				width: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				opacity: 0;
-				animation: fadeInOut 9s infinite;
-			}
+        /* Image Section */
+        .image-section {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
 
-			.carousel img:nth-child(1) {
-				animation-delay: 0s;
-			}
+        .image-section img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
 
-			.carousel img:nth-child(2) {
-				animation-delay: 3s;
-			}
+        /* Carousel Styling */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 250px;
+            border-radius: 8px;
+        }
 
-			.carousel img:nth-child(3) {
-				animation-delay: 6s;
-			}
+        .carousel img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            animation: fadeInOut 9s infinite;
+        }
 
-			@keyframes fadeInOut {
-				0%, 100% { opacity: 0; }
-				33%, 66% { opacity: 1; }
-			}
+        .carousel img:nth-child(1) {
+            animation-delay: 0s;
+        }
 
-			/* Footer */
-			footer {
-				margin: 40px auto;
-				width: 90%;
-				text-align: center;
-				background: #f9f9f9;
-				padding: 20px;
-				border-radius: 12px;
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			}
+        .carousel img:nth-child(2) {
+            animation-delay: 3s;
+        }
 
-			footer .contact {
-				margin: 10px 0;
-			}
+        .carousel img:nth-child(3) {
+            animation-delay: 6s;
+        }
 
-			footer iframe {
-				margin-top: 20px;
-				width: 300px;
-				height: 80px;
-				border-radius: 8px;
-			}
-		</style>
-	</head>
-	<body>
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            33%, 66% { opacity: 1; }
+        }
 
-		<!-- Wrapper -->
-		<div id="wrapper">
+        /* Footer Styling */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
 
-			<!-- Navigation -->
-			<nav id="nav">
-				<ul class="links">
-					<li><a href="index.html">Projects</a></li>
-					<li class="active"><a href="aboutme.html">About Me</a></li>
-					<li><a href="aboutme2.html">About Me Update</a></li>
-				</ul>
-				<ul class="icons">
-					<li><a href="https://www.linkedin.com/in/brandon-lucien-4652b864/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/belucien" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-				</ul>
-			</nav>
+        footer .contact p {
+            margin: 5px 0;
+        }
 
-			<!-- Main Content -->
-			<div id="main">
-				<!-- Text Section -->
-				<div class="text-section">
-					<h1>About Me</h1>
-					<p>Hi, I'm Brandon Lucien, a passionate data analyst with a knack for transforming raw data into meaningful insights.</p>
-					<p>I specialize in SQL, Power BI, and Python, creating stories that help drive better decision-making.</p>
-					<p>Outside of work, I enjoy hiking, photography, and exploring creative endeavors that keep me inspired.</p>
-				</div>
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
 
-				<!-- Image Section -->
-				<div class="image-section">
-					<img src="images/Picture1.jpg" alt="Brandon Lucien">
-					<div class="carousel">
-						<img src="images/1.jpg" alt="Hobby 1">
-						<img src="images/2.jpg" alt="Hobby 2">
-						<img src="images/6.jpg" alt="Hobby 3">
-					</div>
-				</div>
-			</div>
+        footer .social-icons a:hover {
+            color: #1abc9c;
+        }
 
-			<!-- Footer -->
-			<footer>
-				<div class="contact">
-					<p>Los Angeles, CA</p>
-					<p>(562) 980-2064</p>
-					<p>brandon.lucien@outlook.com</p>
-					<div>
-						<a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
-						<a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
-					</div>
-				</div>
-				<iframe src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-			</footer>
-		</div>
-	</body>
-</html>
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text-section, .image
+::contentReference[oaicite:0]{index=0}
+ 
