@@ -16,26 +16,26 @@
 
 			#main {
 				margin: 0 auto;
-				margin-top: 0;
+				margin-top: 0; /* Ensures no gap above the main content */
 				padding: 40px;
 				width: 90%;
 				max-width: 1200px;
 				background-color: #ffffff;
-				border-radius: 0 0 8px 8px;
-				box-shadow: none;
-				border: none;
+				border-radius: 0 0 8px 8px; /* Removes top curves and keeps bottom curves */
+				box-shadow: none; /* Removes shadow causing line */
+				border: none; /* Removes any border */
 				display: flex;
 			}
 
 			.text-section, .image-section {
-				margin: 0;
-				padding: 0;
-				border: none;
+				margin: 0; /* Removes any margin that could cause gaps */
+				padding: 0; /* Removes internal padding */
+				border: none; /* Ensures no border is applied */
 			}
 
 			.text-section * {
-				margin: 0;
-				padding: 0;
+				margin: 0; /* Removes margin from all child elements */
+				padding: 0; /* Removes padding from all child elements */
 			}
 
 			/* Navigator Styling */
@@ -43,17 +43,61 @@
 				width: 90%;
 				max-width: 1200px;
 				margin: 0 auto;
-				background: linear-gradient(to right, #444, #888);
-				padding: 5px 0;
-				box-shadow: none;
+				background: linear-gradient(to right, #444, #888); /* Correct gradient syntax */
+				padding: 5px 0; /* Makes the navigator thinner */
+				box-shadow: none; /* Removes box shadow */
 				display: flex;
-				justify-content: space-between;
+				justify-content: space-between; /* Aligns content left and right */
 				align-items: center;
-				border-radius: 12px 12px 0 0;
-				border-bottom: none;
+				border-radius: 12px 12px 0 0; /* Rounds only the top corners */
+				border-bottom: none; /* Removes the bottom line */
 			}
 
-			#nav .links, #nav .icons {
+			/* Links Section - Left Aligned */
+			#nav .links {
+				display: flex;
+				gap: 0;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			#nav .links li {
+				position: relative; /* Ensures hover effect spans fully */
+				font-size: 16px;
+				font-weight: bold;
+				margin: 0; /* Removes unwanted gaps between items */
+				padding: 0; /* Removes additional spacing */
+			}
+
+			#nav .links li a {
+				text-decoration: none;
+				color: #ffffff; /* Default text color for all links */
+				padding: 5px 20px; /* Adjust padding for flush spacing */
+				display: inline-block; /* Ensures hover effect covers padding */
+				background-color: transparent; /* Default background */
+				border-radius: 4px;
+				transition: background-color 0.3s ease, color 0.3s ease;
+			}
+
+			#nav .links li a:hover {
+				background-color: rgba(255, 255, 255, 0.2); /* Subtle hover background to blend with gradient */
+				color: #ffffff; /* Keeps text white on hover */
+			}
+
+			#nav .links li.active a {
+    			background-color: rgba(255, 255, 255, 0.3); /* Slightly stronger background for the active link */
+    			color: #ffffff; /* Active link remains white */
+			}
+
+			/* Removes unwanted interaction between hover states */
+			#nav .links li a:not(:hover) {
+    			background-color: transparent;
+    			color: #ffffff; /* Keeps non-hovered links white */
+			}
+
+			/* Icons Section - Right Aligned */
+			#nav .icons {
 				display: flex;
 				gap: 15px;
 				margin: 0;
@@ -61,51 +105,126 @@
 				list-style: none;
 			}
 
-			#nav .links li a {
-				text-decoration: none;
-				color: #ffffff;
-				padding: 5px 20px;
-				border-radius: 4px;
-				transition: background-color 0.3s ease, color 0.3s ease;
+			#nav .icons a {
+				color: #ffffff; /* Sets the icon color to white */
+				font-size: 24px; /* Larger icon size */
+				transition: color 0.3s ease;
 			}
 
-			#nav .links li a:hover {
-				background-color: rgba(255, 255, 255, 0.2);
-				color: #ffffff;
+			#nav .icons a:hover {
+				color: #ffcc00; /* Optional: Changes the color on hover for visibility */
+			}
+
+			/* Text Section */
+			.text-section {
+				width: 60%;
+				padding-right: 20px;
+			}
+
+			.text-section h1 {
+				font-size: 24px;
+				font-weight: bold;
+				color: #2c3e50;
+				margin-bottom: 20px;
+				border-bottom: 2px solid #3498db;
+				display: inline-block;
+			}
+
+			.text-section p {
+				font-size: 16px;
+				line-height: 1.8;
+				color: #555;
+			}
+
+			/* Image Section */
+			.image-section {
+				width: 35%;
+				text-align: center;
+			}
+
+			.image-section img {
+				width: 100%;
+				height: 300px;
+				border-radius: 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				object-fit: cover;
+			}
+
+			/* Carousel Styling */
+			.carousel {
+				position: relative;
+				width: 100%;
+				margin-top: 20px;
+				overflow: hidden;
+				height: 300px;
+			}
+
+			.carousel img {
+				width: 100%;
+				height: 300px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				animation: fadeInOut 9s infinite;
+				object-fit: cover;
+			}
+
+			.carousel img:nth-child(1) {
+				animation-delay: 0s;
+			}
+
+			.carousel img:nth-child(2) {
+				animation-delay: 3s;
+			}
+
+			.carousel img:nth-child(3) {
+				animation-delay: 6s;
+			}
+
+			@keyframes fadeInOut {
+				0%, 100% { opacity: 0; }
+				33%, 66% { opacity: 1; }
 			}
 
 			/* Footer Styling */
 			footer {
 				margin: 40px auto;
 				width: 90%;
-				max-width: 400px;
+				max-width: 600px;
 				background: #ffffff;
 				padding: 40px;
 				border-radius: 12px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-				text-align: center;
+				text-align: center; /* Center-aligns the entire footer */
 			}
 
 			footer .contact {
 				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 20px;
+				flex-direction: column; /* Aligns items in a column */
+				align-items: center; /* Centers items horizontally */
+				justify-content: center; /* Centers items vertically */
 				text-align: center;
+				gap: 20px; /* Adds space between sections */
+			}
+			
+			footer .contact section {
+				text-align: center; /* Ensures section text is centered */
 			}
 
 			footer .contact h3 {
 				font-size: 18px;
 				font-weight: bold;
-				color: #2c3e50;
-				margin-bottom: 5px;
+				color: #2c3e50; /* Header color */
+				margin-bottom: 0; /* Adds space below the header */
 			}
 
 			footer .contact p {
 				font-size: 16px;
-				color: #555;
-				margin: 0;
+				color: #555; /* Text color */
+				margin: 0; /* Removes extra margin */
 			}
+
 		</style>
 	</head>
 	<body>
@@ -176,6 +295,7 @@
 					</section>
 				</div>
 			</footer>
+		</div>
 
 			<!-- Copyright -->
 			<div id="copyright">
