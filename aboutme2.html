@@ -10,10 +10,44 @@
 			/* General Layout */
 			body {
 				font-family: Arial, sans-serif;
-				background-color: #f0f4f8;
+				background-color: #f7f9fc;
 				color: #333;
+				margin: 0;
+				padding: 0;
 			}
 
+			/* Navigation Bar */
+			#nav {
+				background-color: #34495e;
+				padding: 10px 20px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: #ffffff;
+			}
+
+			#nav .links {
+				list-style: none;
+				display: flex;
+				margin: 0;
+				padding: 0;
+			}
+
+			#nav .links li {
+				margin-right: 20px;
+			}
+
+			#nav .links a {
+				color: #ffffff;
+				text-decoration: none;
+				font-size: 16px;
+			}
+
+			#nav .links a:hover {
+				text-decoration: underline;
+			}
+
+			/* Main Section */
 			#main {
 				margin: 20px auto;
 				padding: 40px;
@@ -25,17 +59,17 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				align-items: center;
+				align-items: flex-start;
 			}
 
 			/* Text Section */
 			.text-section {
-				width: 60%;
+				width: 55%;
 				padding-right: 20px;
 			}
 
 			.text-section h1 {
-				font-size: 24px;
+				font-size: 28px;
 				font-weight: bold;
 				color: #2c3e50;
 				margin-bottom: 20px;
@@ -47,11 +81,12 @@
 				font-size: 16px;
 				line-height: 1.8;
 				color: #555;
+				margin-bottom: 20px;
 			}
 
 			/* Image Section */
 			.image-section {
-				width: 35%;
+				width: 40%;
 				text-align: center;
 			}
 
@@ -61,7 +96,6 @@
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 
-			/* Carousel Styling */
 			.carousel {
 				position: relative;
 				width: 100%;
@@ -96,10 +130,10 @@
 				33%, 66% { opacity: 1; }
 			}
 
-			/* Footer Styling */
+			/* Footer */
 			footer {
 				margin: 40px auto;
-				width: 80%;
+				width: 90%;
 				text-align: center;
 				background: #f9f9f9;
 				padding: 20px;
@@ -124,27 +158,27 @@
 		<!-- Wrapper -->
 		<div id="wrapper">
 
-			<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="logo">Brandon Lucien</a>
-			</header>
+			<!-- Navigation -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Projects</a></li>
+					<li class="active"><a href="aboutme.html">About Me</a></li>
+					<li><a href="aboutme2.html">About Me Update</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/brandon-lucien-4652b864/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/belucien" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+			</nav>
 
 			<!-- Main Content -->
 			<div id="main">
 				<!-- Text Section -->
 				<div class="text-section">
 					<h1>About Me</h1>
-					<p>
-						Hi, my name is Brandon, and I am a passionate data analyst with experience in uncovering insights 
-						from complex datasets. With tools like SQL, Power BI, and Python, I transform data into meaningful stories.
-					</p>
-					<p>
-						In my free time, I enjoy hiking, photography, and exploring creative projects that fuel my curiosity. 
-						I’m always looking for ways to solve puzzles and provide value to the projects I take on.
-					</p>
-					<p>
-						Feel free to connect with me to discuss projects, collaborations, or just to say hi!
-					</p>
+					<p>Hi, I'm Brandon Lucien, a passionate data analyst with a knack for transforming raw data into meaningful insights.</p>
+					<p>I specialize in SQL, Power BI, and Python, creating stories that help drive better decision-making.</p>
+					<p>Outside of work, I enjoy hiking, photography, and exploring creative endeavors that keep me inspired.</p>
 				</div>
 
 				<!-- Image Section -->
@@ -169,23 +203,8 @@
 						<a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
 					</div>
 				</div>
-				<!-- Spotify Player -->
-				<iframe 
-					src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
-					frameborder="0" 
-					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-				</iframe>
+				<iframe src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 			</footer>
 		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
