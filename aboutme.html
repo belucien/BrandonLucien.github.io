@@ -22,11 +22,9 @@
 				max-width: 1200px;
 				background-color: #ffffff;
 				border-radius: 0 0 8px 8px; /* Removes top curves and keeps bottom curves */
-				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				box-shadow: none; /* Removes shadow causing line */
 				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
+				border: none; /* Removes any border */
 			}
 
 			/* Navigator Styling */
@@ -34,7 +32,7 @@
 				width: 90%;
 				max-width: 1200px;
 				margin: 0 auto;
-				background-color: linear-gradient(to right, #444, #888); /* Gradient background */
+				background: linear-gradient(to right, #444, #888); /* Correct gradient syntax */
 				padding: 5px 0; /* Makes the navigator thinner */
 				box-shadow: none; /* Removes box shadow */
 				display: flex;
