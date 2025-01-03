@@ -10,8 +10,21 @@
 			/* General Layout */
 			body {
 				font-family: Arial, sans-serif;
-				background-color: #1e293b; /* Restored background */
-				color: #ffffff; /* Updated text color */
+				background-color: #1e293b; /* Dark background */
+				color: #ffffff; /* Light text color */
+				margin: 0;
+				padding: 0;
+			}
+
+			#header {
+				background-color: #334155; /* Matching the dark theme */
+				color: #ffffff;
+				text-align: center;
+				padding: 10px 0;
+				font-size: 24px;
+				font-weight: bold;
+				letter-spacing: 1px;
+				border-bottom: 1px solid #475569;
 			}
 
 			#main {
@@ -19,7 +32,7 @@
 				padding: 40px;
 				width: 90%;
 				max-width: 1200px;
-				background-color: #334155; /* Restored main section color */
+				background-color: #334155; /* Dark section background */
 				border-radius: 8px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 				display: flex;
@@ -28,40 +41,99 @@
 				align-items: center;
 			}
 
+			/* Text Section */
+			.text-section {
+				width: 60%;
+				padding-right: 20px;
+			}
+
 			.text-section h1 {
-				font-size: 24px;
+				font-size: 28px;
 				font-weight: bold;
-				color: #ffffff;
+				color: #38bdf8; /* Accent color */
 				margin-bottom: 20px;
-				border-bottom: 2px solid #38bdf8; /* Accent color restored */
+				border-bottom: 2px solid #38bdf8;
 				display: inline-block;
 			}
 
 			.text-section p {
 				font-size: 16px;
 				line-height: 1.8;
-				color: #d1d5db;
+				color: #e2e8f0;
+			}
+
+			/* Image Section */
+			.image-section {
+				width: 35%;
+				text-align: center;
 			}
 
 			.image-section img {
+				width: 100%;
 				border-radius: 8px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 
+			/* Carousel Styling */
+			.carousel {
+				position: relative;
+				width: 100%;
+				margin-top: 20px;
+				overflow: hidden;
+				height: 250px;
+				border-radius: 8px;
+			}
+
+			.carousel img {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				animation: fadeInOut 9s infinite;
+			}
+
+			.carousel img:nth-child(1) {
+				animation-delay: 0s;
+			}
+
+			.carousel img:nth-child(2) {
+				animation-delay: 3s;
+			}
+
+			.carousel img:nth-child(3) {
+				animation-delay: 6s;
+			}
+
+			@keyframes fadeInOut {
+				0%, 100% { opacity: 0; }
+				33%, 66% { opacity: 1; }
+			}
+
+			/* Footer Styling */
 			footer {
 				margin: 40px auto;
 				width: 90%;
 				max-width: 1200px;
 				text-align: center;
-				background: #334155; /* Restored footer color */
+				background: #334155; /* Dark footer background */
+				color: #ffffff;
 				padding: 20px;
 				border-radius: 12px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
 
-			footer p,
+			footer .contact {
+				margin: 10px 0;
+			}
+
 			footer .contact a {
-				color: #d1d5db; /* Restored text color */
+				color: #38bdf8; /* Accent link color */
+				text-decoration: none;
+			}
+
+			footer .contact a:hover {
+				text-decoration: underline;
 			}
 
 			footer iframe {
@@ -93,9 +165,6 @@
 						In my free time, I enjoy hiking, photography, and exploring creative projects that fuel my curiosity. 
 						I’m always looking for ways to solve puzzles and provide value to the projects I take on.
 					</p>
-					<p>
-						Feel free to connect with me to discuss projects, collaborations, or just to say hi!
-					</p>
 				</div>
 
 				<!-- Image Section -->
@@ -114,7 +183,7 @@
 				<div class="contact">
 					<p>Los Angeles, CA</p>
 					<p>(562) 980-2064</p>
-					<p>brandon.lucien@outlook.com</p>
+					<p><a href="mailto:brandon.lucien@outlook.com">brandon.lucien@outlook.com</a></p>
 					<div>
 						<a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
 						<a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
