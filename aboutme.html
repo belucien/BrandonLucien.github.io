@@ -27,7 +27,62 @@
 				justify-content: space-between;
 				align-items: center;
 			}
+			    /* Navigator Styling */
+				#nav {
+        width: 90%; /* Matches the width of #main */
+        max-width: 1200px; /* Matches the maximum width of #main */
+        margin: 0 auto; /* Centers the navigator */
+        background-color: #ffffff; /* Matches the background of #main */
+        border-bottom: 2px solid #e0e0e0; /* Subtle separator below the nav */
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-radius: 8px; /* Adds rounded corners for a cohesive look */
+    }
 
+    #nav .links {
+        display: inline-flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #nav .links li {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #nav .links li a {
+        text-decoration: none;
+        color: #3498db;
+        padding: 5px 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    #nav .links li a:hover {
+        background-color: #3498db;
+        color: #ffffff;
+    }
+
+    #nav .icons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #nav .icons a {
+        color: #555;
+        font-size: 20px;
+        transition: color 0.3s ease;
+    }
+
+    #nav .icons a:hover {
+        color: #3498db;
+    }
 			/* Text Section */
 			.text-section {
 				width: 60%;
@@ -132,6 +187,18 @@
 			<header id="header">
 				<a href="index.html" class="logo">Project Portfolio</a>
 			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+        			<li class="active"><a href="index.html">Projects</a></li>
+        			<li><a href="aboutme.html">About Me</a></li>
+				</ul>
+    			<ul class="icons">
+        			<li><a href="https://www.linkedin.com/in/brandon-lucien-4652b864/" class="icon brands alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+        			<li><a href="https://github.com/belucien" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+    			</ul>
+			</nav>
 
 			<!-- Main Content -->
 			<div id="main">
