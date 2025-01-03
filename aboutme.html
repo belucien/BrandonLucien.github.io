@@ -54,23 +54,38 @@
 			}
 
 			#nav .links li {
+				position: relative; /* Ensures hover effect spans fully */
 				font-size: 16px;
 				font-weight: bold;
+				margin: 0; /* Removes unwanted gaps between items */
 			}
 
 			#nav .links li a {
 				text-decoration: none;
-				color: #3498db;
-				padding: 5px 10px;
+				color: #ffffff; /* Default text color for all links */
+				padding: 5px 20px; /* Adjust padding for flush spacing */
+				display: inline-block; /* Ensures hover effect covers padding */
+				background-color: transparent; /* Default background */
 				border-radius: 4px;
 				transition: background-color 0.3s ease, color 0.3s ease;
 			}
 
 			#nav .links li a:hover {
-				background-color: #3498db;
-				color: #ffffff;
+				background-color: rgba(255, 255, 255, 0.2); /* Subtle hover background to blend with gradient */
+				color: #ffffff; /* Keeps text white on hover */
 			}
 
+			#nav .links li.active a {
+    			background-color: rgba(255, 255, 255, 0.3); /* Slightly stronger background for the active link */
+    			color: #ffffff; /* Active link remains white */
+			}
+
+			/* Removes unwanted interaction between hover states */
+			#nav .links li a:not(:hover) {
+    			background-color: transparent;
+    			color: #ffffff; /* Keeps non-hovered links white */
+			}
+			
 			/* Icons Section - Right Aligned */
 			#nav .icons {
 				display: flex;
