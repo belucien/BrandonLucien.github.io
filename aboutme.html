@@ -12,19 +12,19 @@
 				font-family: Arial, sans-serif;
 				background-color: #f0f4f8;
 				color: #333;
+				margin: 0; /* Removes default margins */
+				padding: 0; /* Removes default padding */
 			}
 
-			#main {
-				margin: 0 auto;
-				margin-top: 0; /* Ensures no gap above the main content */
-				padding: 40px;
-				width: 90%;
-				max-width: 1200px;
-				background-color: #ffffff;
-				border-radius: 0 0 8px 8px; /* Removes top curves and keeps bottom curves */
-				box-shadow: none; /* Removes shadow causing line */
-				display: flex;
-				border: none; /* Removes any border */
+			html {
+				margin: 0;
+				padding: 0;
+			}
+
+			#wrapper {
+				margin: 0;
+				padding: 0;
+				border: none; /* Ensures no border for the wrapper */
 			}
 
 			/* Navigator Styling */
@@ -32,14 +32,15 @@
 				width: 90%;
 				max-width: 1200px;
 				margin: 0 auto;
-				background: linear-gradient(to right, #444, #888); /* Correct gradient syntax */
+				margin-bottom: 0; /* Removes gap between nav and main */
+				background: linear-gradient(to right, #444, #888); /* Gradient background */
 				padding: 5px 0; /* Makes the navigator thinner */
-				box-shadow: none; /* Removes box shadow */
+				box-shadow: none; /* Ensures no shadow appears */
 				display: flex;
 				justify-content: space-between; /* Aligns content left and right */
 				align-items: center;
 				border-radius: 12px 12px 0 0; /* Rounds only the top corners */
-				border-bottom: none; /* Removes the bottom line */
+				border: none; /* Ensures no border is applied */
 			}
 
 			/* Links Section - Left Aligned */
@@ -52,17 +53,17 @@
 			}
 
 			#nav .links li {
-				position: relative; /* Ensures hover effect spans fully */
+				position: relative;
 				font-size: 16px;
 				font-weight: bold;
-				margin: 0; /* Removes unwanted gaps between items */
-				padding: 0; /* Removes additional spacing */
+				margin: 0;
+				padding: 0;
 			}
 
 			#nav .links li a {
 				text-decoration: none;
 				color: #ffffff; /* Default text color for all links */
-				padding: 5px 20px; /* Adjust padding for flush spacing */
+				padding: 5px 20px;
 				display: inline-block; /* Ensures hover effect covers padding */
 				background-color: transparent; /* Default background */
 				border-radius: 4px;
@@ -70,22 +71,15 @@
 			}
 
 			#nav .links li a:hover {
-				background-color: rgba(255, 255, 255, 0.2); /* Subtle hover background to blend with gradient */
-				color: #ffffff; /* Keeps text white on hover */
+				background-color: rgba(255, 255, 255, 0.2);
+				color: #ffffff;
 			}
 
 			#nav .links li.active a {
-    			background-color: rgba(255, 255, 255, 0.3); /* Slightly stronger background for the active link */
-    			color: #ffffff; /* Active link remains white */
+				background-color: rgba(255, 255, 255, 0.3);
+				color: #ffffff;
 			}
 
-			/* Removes unwanted interaction between hover states */
-			#nav .links li a:not(:hover) {
-    			background-color: transparent;
-    			color: #ffffff; /* Keeps non-hovered links white */
-			}
-
-			/* Icons Section - Right Aligned */
 			#nav .icons {
 				display: flex;
 				gap: 15px;
@@ -95,13 +89,30 @@
 			}
 
 			#nav .icons a {
-				color: #ffffff; /* Sets the icon color to white */
-				font-size: 24px; /* Larger icon size */
+				color: #ffffff;
+				font-size: 24px;
 				transition: color 0.3s ease;
 			}
 
 			#nav .icons a:hover {
-				color: #ffcc00; /* Optional: Changes the color on hover for visibility */
+				color: #ffcc00;
+			}
+
+			/* Main Content Styling */
+			#main {
+				margin: 0 auto;
+				margin-top: 0; /* Ensures no gap above main */
+				padding: 40px;
+				width: 90%;
+				max-width: 1200px;
+				background-color: #ffffff;
+				border-radius: 0 0 8px 8px; /* Bottom curves only */
+				box-shadow: none; /* Removes shadow effect */
+				border: none; /* Ensures no border */
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
 			}
 
 			/* Text Section */
@@ -139,43 +150,6 @@
 				object-fit: cover;
 			}
 
-			/* Carousel Styling */
-			.carousel {
-				position: relative;
-				width: 100%;
-				margin-top: 20px;
-				overflow: hidden;
-				height: 300px;
-			}
-
-			.carousel img {
-				width: 100%;
-				height: 300px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				opacity: 0;
-				animation: fadeInOut 9s infinite;
-				object-fit: cover;
-			}
-
-			.carousel img:nth-child(1) {
-				animation-delay: 0s;
-			}
-
-			.carousel img:nth-child(2) {
-				animation-delay: 3s;
-			}
-
-			.carousel img:nth-child(3) {
-				animation-delay: 6s;
-			}
-
-			@keyframes fadeInOut {
-				0%, 100% { opacity: 0; }
-				33%, 66% { opacity: 1; }
-			}
-
 			/* Footer Styling */
 			footer {
 				margin: 40px auto;
@@ -185,17 +159,6 @@
 				padding: 20px;
 				border-radius: 12px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			}
-
-			footer .contact {
-				margin: 10px 0;
-			}
-
-			footer iframe {
-				margin-top: 20px;
-				width: 300px;
-				height: 80px;
-				border-radius: 8px;
 			}
 		</style>
 	</head>
@@ -223,7 +186,6 @@
 
 			<!-- Main Content -->
 			<div id="main">
-				<!-- Text Section -->
 				<div class="text-section">
 					<h1>About Me</h1>
 					<p>
@@ -238,15 +200,8 @@
 						Feel free to connect with me to discuss projects, collaborations, or just to say hi!
 					</p>
 				</div>
-
-				<!-- Image Section -->
 				<div class="image-section">
 					<img src="images/Picture1.jpg" alt="Brandon Lucien">
-					<div class="carousel">
-						<img src="images/1.jpg" alt="Hobby 1">
-						<img src="images/2.jpg" alt="Hobby 2">
-						<img src="images/6.jpg" alt="Hobby 3">
-					</div>
 				</div>
 			</div>
 
@@ -261,23 +216,7 @@
 						<a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
 					</div>
 				</div>
-				<!-- Spotify Player -->
-				<iframe 
-					src="https://open.spotify.com/embed/playlist/28gkj3su0EjS9tD20XTG9T" 
-					frameborder="0" 
-					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-				</iframe>
 			</footer>
 		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
