@@ -69,22 +69,16 @@
             width: 100%;
             margin-top: 20px;
             overflow: hidden;
-            height: 300px; /* Adjust the height to ensure the full image is displayed */
-            border-radius: 8px; /* Ensure rounded corners match images */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
-            background-color: #ffffff; /* Add a background color to avoid cut-off issues */
+            height: 250px;
         }
 
         .carousel img {
             width: 100%;
-            height: 100%; /* Ensure images fill the container */
-            object-fit: cover; /* Proper scaling of images within the container */
             position: absolute;
             top: 0;
             left: 0;
             opacity: 0;
             animation: fadeInOut 9s infinite;
-            border-radius: 8px; /* Ensure rounded corners for each image */
         }
 
         .carousel img:nth-child(1) {
@@ -106,12 +100,13 @@
 
         /* Footer Styling */
         footer {
-            margin: 40px auto;
-            width: 80%;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
             text-align: center;
             background: #f9f9f9;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 40px;
+            border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -150,6 +145,9 @@
                     In my free time, I enjoy hiking, photography, and exploring creative projects that fuel my curiosity. 
                     I’m always looking for ways to solve puzzles and provide value to the projects I take on.
                 </p>
+                <p>
+                    Feel free to connect with me to discuss projects, collaborations, or just to say hi!
+                </p>
             </div>
 
             <!-- Image Section -->
@@ -182,15 +180,6 @@
             </iframe>
         </footer>
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
