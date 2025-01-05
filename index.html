@@ -29,15 +29,20 @@
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
 			}
 
+			.posts article {
+				width: 45%; /* Reduces the width of each box */
+				margin: 10px auto; /* Adjusts spacing around each box */
+				padding: 15px; /* Reduces internal padding */
+				box-sizing: border-box; /* Ensures padding doesn't add to total width */
+				border-radius: 10px; /* Keeps the corners slightly rounded */
+			}
+
 			footer {
 				text-align: center; /* Centers the text */
-				margin: 0 auto;
+				margin-top: -20px; /* Adjusts the spacing to move closer to the footer */
 				font-size: 14px; /* Optional: Adjust font size for readability */
 				color: #555; /* Sets a subtle color for the text */
-				padding: 20px 0;
-				position: fixed;
-				bottom: 0;
-				width: 100%;
+				padding-bottom: 20px; /* Adds some spacing below the text */
 			}
 
 		</style>
