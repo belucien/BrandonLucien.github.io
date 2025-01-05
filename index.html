@@ -34,6 +34,16 @@
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
 			}
 
+			.posts article img {
+				max-width: 90%; /* Ensures the image fits within its parent container */
+				height: auto; /* Maintains aspect ratio */
+				max-height: 300px; /* Limits the image height for a balanced appearance */
+				object-fit: cover; /* Ensures the image fills the container while maintaining its aspect ratio */
+				border-radius: 8px; /* Adds subtle rounded corners for a polished look */
+				margin: 0 auto; /* Centers the image horizontally */
+				display: block; /* Ensures the image is treated as a block element */
+			}
+
 			footer {
 				text-align: center; /* Centers the text */
 				margin-top: -20px; /* Adjusts the spacing to move closer to the footer */
