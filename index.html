@@ -30,52 +30,47 @@
 			}
 
 			.posts article {
-				width: 40%; /* Consistent width */
-				min-height: 250px; /* Increased for better image fit */
-				max-height: 600px; /* Slightly larger max height for flexibility */
-				margin: 0 auto; /* Centers the article */
-				padding: 1em; /* Adds spacing around content */
-				box-sizing: border-box; /* Ensures padding is included in total size */
-				display: flex;
+				display: flex; /* Flexbox to align content vertically */
 				flex-direction: column;
-				justify-content: space-between;
+				justify-content: space-between; /* Space evenly between items */
 				align-items: center;
-				overflow: hidden;
+				width: 40%;
+				min-height: 250px;
+				max-height: 600px;
+				margin: 0 auto;
+				padding: 1em; /* Adds internal spacing */
+				box-sizing: border-box;
+				overflow: hidden; /* Prevents overflow */
 			}
 
 			.posts article img {
-				display: block; /* Removes any inline spacing artifacts */
-				max-width: 100%; /* Ensures it fits within the article width */
-				max-height: 60%; /* Restrains the image height to leave space for text */
-				object-fit: contain; /* Maintains aspect ratio and prevents cropping */
-				margin: 0 auto; /* Centers the image within the article */
+				max-width: 100%; /* Fit within the container's width */
+				max-height: 40%; /* Restricts height relative to the article */
+				object-fit: contain; /* Maintains aspect ratio */
+				margin: 0 auto; /* Centers the image */
 			}
 
 			.posts article h2 {
-				font-size: 1.4em; /* Relative to the default font size */
+				font-size: 1.4em; /* Slightly larger for prominence */
+				margin: 0.5em 0; /* Adjust vertical spacing */
 				text-align: center;
-				margin: 5% 0; /* Proportional margin */
 			}
 
 			.posts article p {
-				font-size: 0.9em; /* Base font size, adjusts with container size */
+				font-size: 0.9em; /* Slightly smaller for balance */
+				margin: 0.5em 0; /* Reduces vertical spacing */
 				text-align: center;
-				margin: 5% 0; /* Proportional margin */
 			}
 
 			.posts article .actions {
-				margin-top: auto; /* Pushes the button to the bottom */
+				margin-top: 1em; /* Adds spacing from content above */
 				text-align: center;
-				font-size: 0.9em; /* Slightly smaller for better fit */
 			}
 
 			.posts article .actions a.button {
-				padding: 0; /* Relative padding for buttons */
-				font-size: inherit; /* Inherits from parent for consistent scaling */
-				border-radius: 5px;
-				display: inline-block;
-				text-align: center;
-				line-height: 2;
+				padding: 0.5em 1em; /* Ensures adequate space inside the button */
+				font-size: inherit;
+				border-radius: 5px; /* Keeps buttons rounded */
 			}
 
 			footer {
