@@ -29,48 +29,6 @@
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
 			}
 
-			/* Ensure .posts article is fully responsive */
-			.posts article {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				align-items: center;
-				width: 100%; /* Use percentages for better scaling */
-				max-width: 500px; /* Optional: Limit the width for very wide screens */
-				margin: 1em auto; /* Center-align with margin */
-				padding: 1em;
-				box-sizing: border-box;
-			}
-
-			/* Image: Ensure it scales fluidly */
-			.posts article img {
-				max-width: 100%; /* Images fit within the container's width */
-				height: auto; /* Maintain aspect ratio */
-				object-fit: contain; /* Ensure images fit nicely without cropping */
-				margin: 0 auto;
-			}
-
-			/* Header (h2): Optimize font size based on screen size */
-			.posts article h2 {
-				font-size: clamp(1.5em, 2vw, 2.5em); /* Scales font size based on viewport width */
-				margin: 0.5em 0;
-				text-align: center;
-			}
-
-			/* Paragraph (p): Adjust spacing for responsiveness */
-			.posts article p {
-				font-size: clamp(0.9em, 1.5vw, 1.2em); /* Responsive font size */
-				margin: 0.5em 0;
-				text-align: center;
-			}
-
-			/* Buttons: Ensure they scale appropriately */
-			.posts article .actions a.button {
-				padding: 0.5em 1em; /* Maintain consistent padding */
-				font-size: clamp(0.8em, 1.2vw, 1em); /* Responsive font size */
-				border-radius: 5px;
-			}
-
 			footer {
 				text-align: center; /* Centers the text */
 				margin-top: -20px; /* Adjusts the spacing to move closer to the footer */
