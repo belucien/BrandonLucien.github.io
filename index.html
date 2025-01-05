@@ -45,10 +45,11 @@
 			}
 
 			.posts article img {
-				width: 100%; /* Relative to the article width */
-				height: auto; /* Maintains aspect ratio */
-				object-fit: cover; /* Ensures images fit nicely */
-				max-height: 70%; /* Ensures it doesn't take up too much space */
+				display: block;
+				max-width: 90%;
+				max-height: 60%;
+				margin: 0 auto;
+				object-fit: contain;
 			}
 
 			.posts article h2 {
