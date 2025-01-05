@@ -31,17 +31,16 @@
 
 			.posts article {
 				width: 40%; /* Consistent width */
-				min-height: 200px;
-				max-height: 550px;
-				margin: 0;
-				padding: 0; /* Relative padding to maintain proportions */
-				box-sizing: border-box;
-				border-radius: 0;
-				display: flex; /* Enables flexbox for content alignment */
-				flex-direction: column; /* Stacks content vertically */
-				justify-content: space-between; /* Evenly distributes content inside */
-				align-items: center; /* Centers content horizontally */
-				overflow: hidden; /* Prevents content overflow */
+				min-height: 250px; /* Increased for better image fit */
+				max-height: 600px; /* Slightly larger max height for flexibility */
+				margin: 0 auto; /* Centers the article */
+				padding: 1em; /* Adds spacing around content */
+				box-sizing: border-box; /* Ensures padding is included in total size */
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				overflow: hidden;
 			}
 
 			.posts article img {
