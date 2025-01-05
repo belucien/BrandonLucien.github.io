@@ -43,34 +43,43 @@
 				overflow: hidden; /* Prevents overflow */
 			}
 
+			/* Image: Ensure it scales correctly */
 			.posts article img {
-				max-width: 100%; /* Fit within the container's width */
-				max-height: 40%; /* Restricts height relative to the article */
+				max-width: 90%; /* Fit within the container's width */
+				max-height: 70%; /* Restricts height relative to the article */
 				object-fit: contain; /* Maintains aspect ratio */
 				margin: 0 auto; /* Centers the image */
+				display: block; /* Ensures consistent block-level behavior */
 			}
 
+			/* Header (h2): Optimize spacing */
 			.posts article h2 {
-				font-size: 1.4em; /* Slightly larger for prominence */
-				margin: 0.5em 0; /* Adjust vertical spacing */
+				font-size: 1.6em; /* Slightly larger for prominence */
+				margin: 0.8em 0; /* Adjust vertical spacing */
 				text-align: center;
+				line-height: 1.2; /* Ensures better readability */
 			}
 
+			/* Paragraph (p): Adjust font size and spacing */
 			.posts article p {
-				font-size: 0.9em; /* Slightly smaller for balance */
+				font-size: 1em; /* Slightly smaller for balance */
 				margin: 0.5em 0; /* Reduces vertical spacing */
 				text-align: center;
+				line-height: 1.5; /* Improves readability */
 			}
 
+			/* Actions/Buttons: Proper alignment and padding */
 			.posts article .actions {
 				margin-top: 1em; /* Adds spacing from content above */
 				text-align: center;
 			}
 
 			.posts article .actions a.button {
-				padding: 0.5em 1em; /* Ensures adequate space inside the button */
+				padding: 0.6em 1.2em; /* Ensures adequate space inside the button */
 				font-size: inherit;
 				border-radius: 5px; /* Keeps buttons rounded */
+				display: inline-block; /* Ensures consistent button display */
+				text-align: center;
 			}
 
 			footer {
