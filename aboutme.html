@@ -168,12 +168,12 @@
 				top: 0;
 				left: 0;
 				opacity: 0;
-				animation: fadeInOut 9s infinite;
+				animation: fadeInOut 50s infinite;
 				object-fit: cover;
 			}
 
 			.carousel img:nth-child(1) {
-				animation-delay: 5s;
+				animation-delay: 0s;
 			}
 
 			.carousel img:nth-child(2) {
@@ -181,40 +181,54 @@
 			}
 
 			.carousel img:nth-child(3) {
-				animation-delay: 5s;
+				animation-delay: 10s;
 			}
 
 			.carousel img:nth-child(4) {
-				animation-delay: 5s;
+				animation-delay: 15s;
 			}
 
 			.carousel img:nth-child(5) {
-				animation-delay: 5s;
+				animation-delay: 20s;
 			}
 
 			.carousel img:nth-child(6) {
-				animation-delay: 5s;
+				animation-delay: 25s;
 			}
 
 			.carousel img:nth-child(7) {
-				animation-delay: 5s;
+				animation-delay: 30s;
 			}
 
 			.carousel img:nth-child(8) {
-				animation-delay: 5s;
+				animation-delay: 35s;
 			}
 
 			.carousel img:nth-child(9) {
-				animation-delay: 5s;
+				animation-delay: 40s;
 			}
 
 			.carousel img:nth-child(10) {
-				animation-delay: 5s;
+				animation-delay: 45s;
 			}
 
+			/* Fade-in-out keyframes */
 			@keyframes fadeInOut {
-				0%, 100% { opacity: 0; }
-				33%, 66% { opacity: 1; }
+				0% {
+					opacity: 0;
+				}
+				10% {
+					opacity: 1; /* Image fully visible */
+				}
+				20% {
+					opacity: 1; /* Hold the image for a bit */
+				}
+				30% {
+					opacity: 0; /* Transition to the next image */
+				}
+				100% {
+					opacity: 0;
+				}
 			}
 
 			/* Footer Styling */
