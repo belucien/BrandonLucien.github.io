@@ -1,5 +1,5 @@
-Brandon Lucien Project Portfolio
+# Brandon Lucien Project Portfolio
 
-Thes projects were produced personally and some on the job experience
+# The projects were produced personally and some from on the job experience
 
 Thank you for visiting!
