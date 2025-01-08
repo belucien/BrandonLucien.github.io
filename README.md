@@ -1,5 +1,18 @@
 # Brandon Lucien Project Portfolio
 
-# The projects were produced personally and some from on the job experience
+## **Overview**
+All projects were created and produced either personally and from on the job experience
 
-Thank you for visiting!
+## **Features**
+- **EDA Videogame Sales**
+- **EDA Interactive App**
+- **Data Visualizations**
+- **Data Cleaning SQL**
+
+
+
+## **Contact**
+Feel free to reach out on [LinkedIn]([https://linkedin.com](https://www.linkedin.com/in/brandon-lucien-4652b864/))
+
+
+# Thank you for visiting!
